@@ -16,12 +16,16 @@
 		</div>
 	</div>
  	
+
  	<div class="col-xs-6">
- 		<div class="panel panel-default">
-  			<div class="panel-body">	
-  				<p>tweets</p>
+ 		<%= render '/components/post_form'%>
+ 		<% @posts.each do |post| %>
+ 			<div class="panel panel-default">
+  				<div class="panel-body">	
+  					<p><%= post.content %></p>
+				</div>
 			</div>
-		</div>
+		<%end%>	
 	</div>
  	
  	<div class="col-xs-3">
@@ -30,13 +34,7 @@
   				<p>who to follow</p>
 			</div>
 		</div>
-	</div>
-</div>
-
-<!-- Next Row -->
-<div class="row">
- 	<div class="col-xs-3 col-xs-offset-9">
- 		<div class="panel panel-default">
+		<div class="panel panel-default">
   			<div class="panel-body">	
   				<p>trends</p>
 			</div>
